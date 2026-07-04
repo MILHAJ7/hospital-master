@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure---t$(*+g*u7szmea=9&(en*)-bt009l!nv^g9!9ss0$7^rti)1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    ".onrender.com",
+]
 
 
 # Application definition
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,11 +126,17 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / "static",
 ]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'login'
@@ -140,6 +151,8 @@ EMAIL_USE_TLS = True
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-EMAIL_HOST_USER = 'milhaj9@gmail.com'
-EMAIL_HOST_PASSWORD = 'ohmt wcjd gvsm cqby'
+EMAIL_HOST_USER = os.environ.get('milhaj9@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('ohmt wcjd gvsm cqby')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
