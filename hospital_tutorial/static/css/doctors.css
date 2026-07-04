@@ -1,0 +1,136 @@
+.doctor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+.doctor-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+/* ===== Doctor Banner ===== */
+
+.doctor-banner{
+    background:linear-gradient(135deg,#023e8a,#0077b6);
+    color:rgb(15, 11, 11);
+    padding:120px 10%;
+    text-align:center;
+}
+
+.doctor-banner h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.doctor-banner p{
+    font-size:22px;
+}
+
+/* ===== Specialities ===== */
+
+.speciality-section{
+    padding:60px 8%;
+}
+
+.speciality-title{
+    text-align:center;
+    color:#0077b6;
+    margin-bottom:40px;
+}
+
+.speciality-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.speciality-box{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.speciality-box:hover{
+    transform:translateY(-10px);
+}
+
+/* ===== Doctors ===== */
+
+.doctors-section{
+    padding:60px 8%;
+    background:#f8fbff;
+}
+
+.doctor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.doctor-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.doctor-card:hover{
+    transform:translateY(-12px);
+}
+
+.doctor-image{
+    height:250px;
+    overflow:hidden;
+}
+
+.doctor-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.doctor-info{
+    padding:25px;
+}
+
+.doctor-info h3{
+    color:#023e8a;
+    margin-bottom:8px;
+}
+
+.speciality{
+    color:#0077b6;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.experience{
+    background:#e8f7ff;
+    padding:8px 12px;
+    border-radius:20px;
+    display:inline-block;
+    margin-bottom:15px;
+}
+
+.available{
+    color:green;
+    font-weight:bold;
+}
+
+.book-btn{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    background:#0077b6;
+    color:rgb(24, 17, 17);
+    padding:10px 20px;
+    border-radius:25px;
+}

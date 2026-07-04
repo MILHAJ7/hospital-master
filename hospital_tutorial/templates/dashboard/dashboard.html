@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="dashboard-header">
+
+    <h1>Hospital Dashboard</h1>
+
+    <p>
+        Welcome back 
+    </p>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <h2>1,245</h2>
+        <p>Total Patients</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>85</h2>
+        <p>Doctors</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>120</h2>
+        <p>Appointments Today</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>24</h2>
+        <p>Available Beds</p>
+    </div>
+
+</section>
+
+<section class="quick-actions">
+
+    <h2 class="action-title">
+        Quick Actions
+    </h2>
+
+    <div class="action-grid">
+
+        <a href="/patients/" class="action-card">
+            <span>🧑‍🤝‍🧑</span>
+            Patients
+        </a>
+
+        <a href="/doctors/" class="action-card">
+            <span>👨‍⚕️</span>
+            Doctors
+        </a>
+
+        <a href="/appointments/" class="action-card">
+            <span>📅</span>
+            Appointments
+        </a>
+
+        <a href="/contact/" class="action-card">
+            <span>📞</span>
+            Support
+        </a>
+
+    </div>
+
+</section>
+
+<section class="activity-section">
+
+    <div class="activity-box">
+
+        <h2>Recent Activities</h2>
+
+        <ul>
+            <li>✅ New patient registered - John Doe</li>
+            <li>📅 Appointment booked with Dr. Smith</li>
+            <li>🏥 Patient discharged successfully</li>
+            <li>👨‍⚕️ New doctor joined Cardiology Department</li>
+            <li>🧪 Lab report uploaded</li>
+        </ul>
+
+    </div>
+
+</section>
+
+{% endblock %}

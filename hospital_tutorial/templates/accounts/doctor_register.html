@@ -1,0 +1,52 @@
+{% extends 'auth_base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-success text-white text-center">
+                <h2>Doctor Registration</h2>
+            </div>
+
+            <div class="card-body">
+
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    Please correct the errors below.
+                </div>
+                {% endif %}
+
+                <form method="POST">
+
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <button type="submit" class="btn btn-success w-100">
+                        Register
+                    </button>
+
+                </form>
+
+                <hr>
+
+                <p class="text-center">
+                    Already have an account?
+                    <a href="{% url 'login' %}">
+                        Login
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

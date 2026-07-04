@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/prescription.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="prescription-wrapper">
+
+    <div class="prescription-card">
+
+        <h2>Create Prescription</h2>
+
+        <p class="patient-name">
+            <strong>Patient:</strong>
+            {{ appointment.patient.user.username }}
+        </p>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="btn-save">
+                💊 Save Prescription
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

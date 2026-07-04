@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/doctor_dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="doctor-dashboard">
+
+    <div class="welcome-card">
+        <h1>Doctor Dashboard</h1>
+
+        <h4>
+            Welcome Dr. {{ request.user.username }}
+        </h4>
+
+        <p>
+            Manage appointments and patients from your dashboard.
+        </p>
+    </div>
+
+    <div class="dashboard-cards">
+
+        <a href="{% url 'appointment_list' %}" class="card">
+            <h2>📅</h2>
+            <h4>Appointments</h4>
+            <p>View all appointment requests</p>
+        </a>
+
+        <a href="{% url 'doctor_list' %}" class="card">
+            <h2>👨‍⚕️</h2>
+            <h4>Doctors</h4>
+            <p>View doctor details</p>
+        </a>
+
+        <a href="{% url 'logout' %}" class="card logout">
+            <h2>🚪</h2>
+            <h4>Logout</h4>
+            <p>Sign out safely</p>
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+.hero-btn{
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:white;
+    color:#0077b6;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 25px rgba(255,255,255,.3);
+}
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+
+    background:white;
+    color:#0077b6;
+
+    text-decoration:none;
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(255,255,255,.4);
+}

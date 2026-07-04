@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2>Prescription</h2>
+
+        <hr>
+
+        <p><strong>Patient:</strong>
+            {{ appointment.patient.user.username }}
+        </p>
+
+        <p><strong>Doctor:</strong>
+            {{ appointment.doctor.user.username }}
+        </p>
+
+        <p><strong>Date:</strong>
+            {{ appointment.appointment_date }}
+        </p>
+
+        <hr>
+
+        <h4>Medicine</h4>
+
+        <p>{{ prescription.medicine }}</p>
+
+        <h4>Dosage</h4>
+
+        <p>{{ prescription.dosage }}</p>
+
+        <h4>Advice</h4>
+
+        <p>{{ prescription.advice }}</p>
+
+    </div>
+
+</div>
+
+{% endblock %}

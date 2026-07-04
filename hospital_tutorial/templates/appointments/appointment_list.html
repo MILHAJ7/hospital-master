@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/appointments.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="appointments-container">
+
+    <h2>Appointments</h2>
+
+    <table>
+
+<tr>
+    <th>Patient</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Status</th>
+    <th>Actions</th>
+    <th>Prescription</th>
+    <th>Medical Report</th>
+</tr>
+
+{% for appointment in appointments %}
+
+<tr>
+
+    <td>{{ appointment.patient.user.username }}</td>
+    <td>{{ appointment.appointment_date }}</td>
+    <td>{{ appointment.appointment_time }}</td>
+    <td>{{ appointment.status }}</td>
+
+    <!-- Actions -->
+    <td>
+
+        {% if request.user.role == "doctor" %}
+
+            {% if appointment.status == "Pending" %}
+                <a href="{% url 'approve_appointment' appointment.id %}" class="btn-approve">
+                    ✔ 
+                </a>
+            {% endif %}
+
+            <a href="{% url 'delete_appointment' appointment.id %}" class="btn-delete">
+                ✖ 
+            </a>
+
+        {% endif %}
+
+    </td>
+
+    <!-- Prescription -->
+    <td>
+
+        {% if appointment.prescription %}
+            <a href="{% url 'view_prescription' appointment.id %}" class="btn-view">
+                View Prescription
+            </a>
+        {% else %}
+            {% if request.user.role == "doctor" %}
+                <a href="{% url 'create_prescription' appointment.id %}" class="btn-create">
+                    Create Prescription
+                </a>
+            {% else %}
+                <span class="waiting">Waiting </span>
+            {% endif %}
+        {% endif %}
+
+    </td>
+
+    <!-- Medical Report -->
+    <td>
+
+        {% if appointment.medical_report %}
+            <a href="{{ appointment.medical_report.url }}"
+               class="btn-report"
+               target="_blank"
+               download>
+                View Report
+            </a>
+        {% else %}
+            <span class="no-report">No Report</span>
+        {% endif %}
+
+    </td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+    <td colspan="7">No appointments found.</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

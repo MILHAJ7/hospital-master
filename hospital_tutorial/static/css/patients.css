@@ -1,0 +1,123 @@
+.patient-table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+}
+
+.patient-table th{
+    background:#d9dde0;
+    color:rgb(26, 19, 19);
+    padding:15px;
+}
+
+.patient-table td{
+    padding:15px;
+    border-bottom:1px solid #090909;
+}
+.patient-hero{
+    background:linear-gradient(135deg,#0077b6,#00b4d8);
+    color:white;
+    padding:100px 10%;
+    text-align:center;
+}
+
+.patient-hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.patient-hero p{
+    font-size:20px;
+}
+
+.patient-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:50px 8%;
+}
+
+.stat-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h2{
+    color:#d4dfe4;
+    font-size:40px;
+}
+
+.patient-actions{
+    width:90%;
+    margin:20px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.search-box{
+    width:350px;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.add-btn{
+    background:#cdd4d7;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:10px;
+}
+
+.add-btn:hover{
+    background:#cbd3d7;
+}
+
+.patient-grid{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding-bottom:50px;
+}
+
+.patient-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.patient-avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#d4dce0;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    margin:0 auto 15px;
+}
+
+.patient-card h3{
+    color:#c6d6df;
+}
+
+.patient-card p{
+    margin:8px 0;
+    color:#eadcdc;
+}

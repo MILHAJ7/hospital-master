@@ -1,0 +1,141 @@
+/* ===== NAVBAR ===== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:85px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 80px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.1);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#0096c7;
+    letter-spacing:1px;
+}
+
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#333;
+    font-size:16px;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
+}
+
+/* Animated underline */
+
+.nav-menu a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+
+    width:0%;
+    height:3px;
+
+    background:#00b4d8;
+    border-radius:10px;
+
+    transition:.4s;
+}
+
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+.nav-menu a:hover{
+    color:#00b4d8;
+}
+
+.logout-btn{
+    background:linear-gradient(
+    135deg,
+    #00b4d8,
+    #0077b6);
+
+    color:white !important;
+
+    padding:12px 25px;
+    border-radius:50px;
+
+    transition:.4s;
+}
+
+.logout-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,180,216,.4);
+}
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#00b4d8;
+}
+
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-menu a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:3px;
+    background:#00b4d8;
+    transition:.3s;
+}
+
+.nav-menu a:hover::after{
+    width:100%;
+}
+
+.nav-menu a:hover{
+    color:#00b4d8;
+}

@@ -1,0 +1,184 @@
+/* ===========================
+   Dark Background
+=========================== */
+
+body{
+    background:linear-gradient(135deg,#08131f,#0f2235,#152d45);
+    min-height:100vh;
+}
+
+/* ===========================
+   Wrapper
+=========================== */
+
+.prescription-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.prescription-card{
+
+    width:650px;
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.prescription-card h2{
+
+    color:#00d4ff;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+    font-weight:bold;
+}
+
+/* ===========================
+   Patient Name
+=========================== */
+
+.patient-name{
+
+    color:#ffffff;
+
+    background:#12314b;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+}
+
+/* ===========================
+   Labels
+=========================== */
+
+label{
+
+    display:block;
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+textarea,
+input{
+
+    width:100%;
+
+    background:#1b3248;
+
+    color:white;
+
+    border:1px solid #2e5a7b;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+}
+
+textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+}
+
+textarea:focus,
+input:focus{
+
+    outline:none;
+
+    border-color:#00d4ff;
+
+    box-shadow:0 0 15px rgba(0,212,255,.35);
+}
+
+/* ===========================
+   Save Button
+=========================== */
+
+.btn-save{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#00b894,#00d084);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-save:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,208,132,.4);
+}
+
+.btn-save:active{
+
+    transform:scale(.98);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.prescription-card{
+
+    width:100%;
+}
+}

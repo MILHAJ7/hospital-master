@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block extra_css %}
+{% endblock %}
+    
+</head>
+<body>
+
+<nav class="navbar">
+
+    
+
+    <div class="logo">
+         MCare
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/service/">Services</a></li>
+        <li><a href="/patients/">Patients</a></li>
+        <li><a href="/doctors/">Doctors</a></li>
+        <li><a href="/dashboard/">Dashboard</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/logout/" class="logout-btn">Logout</a></li>
+        <li>
+    <a href="{% url 'appointment_list' %}">
+        Appointments
+    </a>
+</li>
+
+<li><li>
+    <a href="{% url 'book_appointment' %}">
+        Book Appointment
+    </a>
+</li>
+</li>
+    </ul>
+
+</nav>
+
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show">
+            {{ message }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% block content %}
+{% endblock %}
+
+<footer>
+    <p>© 2026 MCare Hospital Management System</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
